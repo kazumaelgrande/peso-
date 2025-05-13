@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Control de Peso</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Control de Peso</h1>
+        <form id="weightForm">
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="weight">Ingrese su peso (kg):</label>
+                    <input type="number" id="weight" name="weight" min="1" max="300" required />
+                </div>
+                <div class="input-group">
+                    <label for="height">Ingrese su estatura (m):</label>
+                    <input type="number" id="height" name="height" min="0.5" max="2.5" step="0.01" required />
+                </div>
+                <div class="input-group">
+                    <label for="gender">Género:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="" disabled selected>Seleccione</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit">Calcular</button>
+        </form>
+    <div id="result"></div>
+    <div id="mediaContainer" style="display:none; text-align:center; margin-top:20px;">
+        <img id="weightImage" src="12482.jpg" alt="Imagen de peso" style="max-width: 100%; height: auto;"/>
+        <audio id="weightAudio" controls>
+            <source src="oye gelda ( sonido saturado )(MP3_160K).mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
